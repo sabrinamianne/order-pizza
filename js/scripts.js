@@ -57,7 +57,7 @@ function displayPizzasDetails(listPizzasToDisplay) {
   var pizzaDisplayList = $("ol#olFirstList");
   var htmlForPizzasInfo = "";
   listPizzasToDisplay.listOfPizzas.forEach(function(pizza) {
-  htmlForPizzasInfo += "<li id=" + pizza.id  + ">" +"Size of your Pizza:   "+ pizza.size + "            Topping :     " + pizza.topping + "Price of your Pizza :       " +pizza.price+ "$"+"</li>";
+  htmlForPizzasInfo += "<li id=" + pizza.id  + ">" +"Size of your Pizza:   "+ pizza.size + "            Topping :     " + pizza.topping + "        Price of your Pizza :       " +pizza.price+ "$"+"</li>";
 });
 pizzaDisplayList.html(htmlForPizzasInfo);
 };
