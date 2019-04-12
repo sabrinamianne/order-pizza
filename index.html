@@ -6,8 +6,8 @@
     <link href="css/styles.css" rel="stylesheet" type="text/css" media="all">
     <script src="js/jquery-3.3.1.js"></script>
     <script src="js/scripts.js"></script>
-
     <title> SMK PIZZAS SEATTLE</title>
+    <link rel="shortcut icon" href="img/iconepizza.ico" type="image/x-icon">
   </head>
   <body>
     <div class="container">
@@ -20,7 +20,7 @@
         <div class="col-md-6">
           <div class="menu">
 
-            <p><img src="img/menu.png" alt="menu" height="800px"></p>
+            <p><img src="img/menu.png" alt="menu" height="900px"></p>
           </div>
         </div>
         <div class="col-md-3">
@@ -55,7 +55,7 @@
               <input type="checkbox" name="topping" value="Mushroom"> Mushroom <br>
               <input type="checkbox" name="topping" value="Artichoke"> Artichoke <br>
               <input type="checkbox" name="topping" value="Anchovy"> Anchovy <br>
-              <input type="checkbox" name="topping" value="Pineapple"> Pineapple <br>
+              <input type="checkbox" name="topping" value="Pineapple"> Pineapple <br><br>
               </p>
             </div>
             <button type="submit" class="btn btn-warning"> Order </button>
@@ -63,14 +63,20 @@
         </div>
         <div class="col-md-3">
           <h1> YOUR ORDER </h1>
-          <div class="resultOrderHidden">
-            <h3 id="head3"> What you have ordered :</h3><br>
-              <ol id="olFirstList">
-              </ol>
-               <button class= "btn btn-danger"onclick="location.reload();"id="refresh">Refresh and clear all cities.</button>
+          <h3 id="head3"> What you have ordered </h3><br>
+            <ol id="olFirstList">
+            </ol>
+          <button class= "btn btn-warning"onclick="location.reload();"id="refresh">Refresh and clear your order.</button>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div id="col-md-6">
+          <div class="resultOrderHidden"
+            <span class="resultOrder"></span>
           </div>
         </div>
-
       </div>
     </div>
   </body>
