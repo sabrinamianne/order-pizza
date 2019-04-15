@@ -20,7 +20,6 @@ _Create a website for a pizza company where a user can choose one or more indivi
 | Behavior | Input | Output |
 | ------------- |:-------------:| -----:|
 | The web application takes the user choice of size and toppings and will return the price of the pizza | choice of the user : small and 4 toppings | The pizza costs 15$ |
-
 | | | |
 
 

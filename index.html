@@ -25,6 +25,8 @@
         </div>
         <div class="col-md-3">
           <form id="formOne">
+            <label for="userEmail">Please enter your email :</label>
+            <input type ="email" name="userEmail"><br><br>
             <label for="size">Choose the size : </label>
             <select id="size">
               <option value="small">Small</option>
@@ -58,11 +60,12 @@
               <input type="checkbox" name="topping" value="Pineapple"> Pineapple <br><br>
               </p>
             </div>
-            <button type="submit" class="btn btn-warning"> Order </button>
+            <button type="submit" class="btn btn-warning"> Add To Cart </button><br><br>
+            <input class="btn btn-danger" type="button" name="clear_form" value=" Add Additional Pizza" onClick="this.form.reset()"/>
           </form>
         </div>
         <div class="col-md-3">
-          <h1> YOUR ORDER </h1>
+          <h1> YOUR CART </h1>
           <h3 id="head3"> What you have ordered </h3><br>
             <ol id="olFirstList">
             </ol>
@@ -72,9 +75,9 @@
     </div>
     <div class="container">
       <div class="row">
-        <div id="col-md-12">
-          <div class="resultOrderHidden">
-            <span class="resultOrder"></span>
+        <div class="col-md-12">
+          <div class="linkOrder">
+           <a href="order.html" class="btn bt-danger">Order</a>
           </div>
         </div>
       </div>
