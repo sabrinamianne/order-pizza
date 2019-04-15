@@ -3,6 +3,7 @@ function ListPizzas () {
   this.listOfPizzas = [],
   this.currentId = 0
 }
+
 // Prototype for add to an array every chocie of pizzas
 ListPizzas.prototype.addPizza = function(newpizza) {
   newpizza.id = this.assignId();
@@ -57,7 +58,7 @@ function displayPizzasDetails(listPizzasToDisplay) {
   var pizzaDisplayList = $("ol#olFirstList");
   var htmlForPizzasInfo = "";
   listPizzasToDisplay.listOfPizzas.forEach(function(pizza) {
-  htmlForPizzasInfo += "<li id=" + pizza.id  + ">" +"Size of your Pizza:   "+ pizza.size + "            Topping :     " + pizza.topping + "        Price of your Pizza :       " +pizza.price+ "$"+"</li>";
+  htmlForPizzasInfo += "<li id=" + pizza.id  + ">" +"Size of your Pizza:   "+ pizza.size + "            Topping :     " + pizza.topping + "        Price of your Pizza :       " +pizza.price+ "$"+ "</li>";
 });
 pizzaDisplayList.html(htmlForPizzasInfo);
 };
@@ -70,6 +71,7 @@ $(document).ready(function() {
     var choiceUserSize = $("select#size").val();
     var varPrice = 0;
     var listToppings= [];
+    var amount = 0;
     // function to get in my empty array all toppings chose by the user for the pizza
     $("input:checkbox[name=topping]:checked").each(function(){
        var userchoice = $(this).val()
@@ -79,15 +81,7 @@ $(document).ready(function() {
      var newOrder =  new Pizza (listToppings,choiceUserSize,varPrice);
      // Call my prototype to get the price of the pizzas
      var priceResult = newOrder.getprice();
-
      listPizzas.addPizza(newOrder);
      displayPizzasDetails(listPizzas)
-
-     $("#resultOrder").text("Final price of the order")
-     $("#resultOrderHidden").show();
-
-
- console.log(priceResult + "$" + listPizzas.pizzas)
-
   });
 });
